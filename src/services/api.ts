@@ -36,7 +36,7 @@ export const login = async (email: string, password: string) => {
 };
 
 export const logout = async () => {
-  await api.post('/auth/logout');
+  await API.post('/api/auth/logout');
   Cookies.remove('token');
 };
 
