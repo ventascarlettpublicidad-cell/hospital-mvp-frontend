@@ -31,8 +31,7 @@ export default API;
 
 // Auth
 export const login = async (email: string, password: string) => {
-  const { data } = await api.post('/auth/login', { email, password });
-  Cookies.set('token', data.token, { expires: 1 });
+  const { data } = await API.post('/api/auth/login', { email, password });
   return data;
 };
 
